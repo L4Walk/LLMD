@@ -1,8 +1,9 @@
 import streamlit as st
-import pandas as pd
+import threading
 import json
 import os
 from utils.model_downloader import down_models
+
 
 
 # 读取 JSON 文件的函数
@@ -16,10 +17,22 @@ def load_data(file_path):
     return data
 
 
-# 创建下载按钮的函数（这里是下载逻辑的占位符）
+# 创建下载按钮的函数
 def download_model(model_name):
-    down_models(model_name)
-    st.success(f"{model_name}下载成功")
+    with st.spinner(f'正在下载 {model_name}...'):
+        down_models(model_name)
+    st.success(f"{model_name} 下载成功")
+
+def download_task(model_name):
+    with st.spinner(f'正在下载 {model_name}...'):
+        down_models(model_name)
+        st.success(f"{model_name} 下载成功")
+
+
+
+def start_download_thread(model_name):
+    download_thread = threading.Thread(target=download_task, args=(model_name,))
+    download_thread.start()
 
 
 """
