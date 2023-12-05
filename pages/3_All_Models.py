@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import os
+from utils.down_models import down_models
 
 
 # 读取 JSON 文件的函数
@@ -16,9 +17,9 @@ def load_data(file_path):
 
 
 # 创建下载按钮的函数（这里是下载逻辑的占位符）
-def download_model(link):
-    # 你的下载逻辑
-    st.write(f"下载链接：{link}")
+def download_model(model_name):
+    down_models(model_name)
+    st.success(f"{model_name}下载成功")
 
 
 """
@@ -39,4 +40,4 @@ for model_name, link in data.items():
     col = st.columns([1])[0]  # 创建一个列，占据整行宽度
     with col:
         if st.button(f" {model_name}"):
-            download_model(link)
+            download_model(model_name)
