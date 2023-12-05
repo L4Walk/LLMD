@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import os
-from utils.down_models import down_models
+from utils.model_downloader import down_models
 
 
 # 读取 JSON 文件的函数
