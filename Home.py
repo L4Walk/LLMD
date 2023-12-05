@@ -1,5 +1,8 @@
 import streamlit as st
 from utils import getModelUrls
+from dotenv import load_dotenv
+
+load_dotenv()
 
 """
 # LLMD

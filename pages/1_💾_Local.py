@@ -8,7 +8,7 @@ import time
 import sys
 import os
 
-#from .Options import setup_logger
+from utils.config import config
 
 #logger = setup_logger()
 
@@ -20,7 +20,7 @@ st.write("查看和管理本地已下载的模型")
 
 
 # 默认路径：项目根目录/models
-save_path = os.path.join(os.getcwd(), "models")
+save_path = config.model_dir
 
 # 检查路径是否存在
 if not os.path.exists(save_path):
@@ -38,6 +38,13 @@ if 'editable' not in st.session_state:
 if st.session_state.editable:
     # 可编辑状态
     save_path = st.text_input("地址", value=save_path)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+        print(f"创建了文件夹：{save_path}")
+    else:
+        print(f"文件夹已存在：{save_path}")
+    
+    config.update_model_dir(save_path)
 else:
     # 只读状态
     st.text_input("地址", value=save_path, disabled=True)
