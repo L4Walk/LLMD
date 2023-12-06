@@ -18,7 +18,7 @@ LLMD 是一个开源项目，旨在帮助用户方便快捷地下载和使用 Mo
 1. 克隆仓库到本地：
 
    ```bash
-   git clone [您的项目仓库链接]
+   git clone https://github.com/L4Walk/LLMD.git
    ```
 
 2. 安装依赖：
