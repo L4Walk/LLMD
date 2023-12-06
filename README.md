@@ -54,7 +54,7 @@ LLMD 是一个开源项目，旨在帮助用户方便快捷地下载和使用 Mo
 
 ## 联系方式
 
-**VX**: `L4Walk6`
+**VX**: `L4Walk6`  
 **E-mail**: `L4Walk@chuheng.tech`
 
 ---
