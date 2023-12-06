@@ -31,10 +31,18 @@ LLMD 是一个开源项目，旨在帮助用户方便快捷地下载和使用 Mo
 1. 运行主程序：
 
    ```bash
-   streamlit run home.py
+   streamlit run Home.py
    ```
 
 2. 按照界面提示操作即可下载和使用 ModelScope 社区的模型。
+
+## 待办事项 (To-Do)
+
+- **模型分类功能**：实现对下载模型的分类管理。
+- **HuggingFace下载支持**：增加对 HuggingFace 模型库的支持。
+- **版本管理**：实现模型版本的跟踪和管理。
+- **Chat交互界面**：开发基于聊天的交互界面，提高用户体验。
+- **OpenAPI管理界面**：构建一个OpenAPI管理界面，方便用户管理和调用API。
 
 ## 贡献
 
@@ -46,7 +54,8 @@ LLMD 是一个开源项目，旨在帮助用户方便快捷地下载和使用 Mo
 
 ## 联系方式
 
-VX: `L4Walk6
+**VX**: `L4Walk6`
+**E-mail**: `L4Walk@chuheng.tech`
 
 ---
 
